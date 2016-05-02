@@ -36,7 +36,7 @@ Alice -> Bob: hello
 其官方网站为：http://plantuml.com/
 
 ## 举例
-下面列举了几个使用PlantUML生成UML图的例子，通过这些列子来直观的理解PlantUML 如何进行画图
+下面列举了几个使用PlantUML生成UML图的例子，通过这些例子来直观的了解PlantUML 的使用。
 
 * 时序图
 
@@ -109,45 +109,60 @@ ArrayList : size()
 
 * 状态图
 
-![](demo-Class-Diagram.png)
-* 组件图
+```
+@startuml
+[*] --> 待复核:需要复核
+待复核 --> 已接收
+已接收 --> 已拒绝
+待复核 --> 已拒绝
+已接收 --> 汇款成功
+已接收 --> 汇款失败
+汇款失败 --> 已退款
+汇款成功 --> [*]
+已退款 --> [*]
+
+@enduml
+
+```
+
+![](http://feidragon.github.io/tower-resources/demo-Class-Diagram.png)
 
 
 ## 安装
-Local installation
-Once you've got the idea, you may install locally PlantUML. (There is a page dedicated on installation here)
 
-You must have Java installed on your machine, and optionally Graphviz software which are used for all diagrams but sequence diagrams and activity beta diagrams.
+1. 首先必须在电脑中安装Java
 
-Then you can then download the jar file plantuml.jar, and save it on your local disk.
+2. 可选安装Graphviz(生成序列图和活动图之外的其他UML图需要用到它)
 
-An easy way of testing your installation is to launch the GUI by double-clicking on the JAR file.
+3. 下载 [plantuml.jar](http://sourceforge.net/projects/plantuml/files/plantuml.jar/download) 并保存到本地磁盘即可
 
-You can also include PlantUML into your own scripts or documentation tools:
+4. 用命令行即可用包含PlantUML命令的文件生成图片
 
-    Make a file containing PlantUML commands, either with an editor or when running other software which calls PlantUML.
-
-    Here is a file called sequenceDiagram.txt:
-
-    @startuml
-    Alice -> Bob: test
-    @enduml
-
-    Run (or have the software call) PlantUML with this file as input. The output is an image, which either appears in the other software, or is written to an image file on disk.
-
-    For example,
-
+  例如：
+  ```
     java -jar plantuml.jar sequenceDiagram.txt
-
-    and the result is a nice diagram in sequenceDiagram.png.
+  ```
+  执行完就会生成一个名为sequenceDiagram.png的图片
 
 ## 编辑工具
 
-个人推荐 Atom作为编辑工具
+现在已经有许多开发工具或编辑器支持PlantUML文件的编写、UML图片生成，可以在这里查看：[工具](http://plantuml.com/running.html)
+
+个人推荐 Atom 编辑器作为编辑工具 ，其包含了PlantUML的插件：
 
 
-已经有了一些介绍PlantUML使用的文章，可以参考：
+* plantuml-viewer
 
-http://archive.3zso.com/archives/plantuml-quickstart.html
+  插件介绍：[https://atom.io/packages/plantuml-viewer](https://atom.io/packages/plantuml-viewer)
 
-更多使用方法参考官方中文文档：http://translate.plantuml.com/zh
+  ![](https://i.github-camo.com/bb28497b36c99c618a38f3eb114420c699a87833/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f31303830393339302f706c616e74756d6c2d7669657765722e676966)
+
+## 参考资料
+
+网络中已经有了一些介绍PlantUML使用的文章，可以参考：
+
+[http://archive.3zso.com/archives/plantuml-quickstart.html](http://archive.3zso.com/archives/plantuml-quickstart.html)
+
+[http://translate.plantuml.com/zh](http://translate.plantuml.com/zh)
+
+[http://www.jianshu.com/p/e92a52770832](http://www.jianshu.com/p/e92a52770832)
