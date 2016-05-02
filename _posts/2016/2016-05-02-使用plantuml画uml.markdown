@@ -20,10 +20,12 @@ PlantUML 是一个用纯文本语言创建UML图的开源的工具。
 通常我们使用 ``VISIO`` 软件进行流程图等图的生成，现在使用``PlantUML``, 只需要创建一个包含PlantUML 命令的文本文件，然后就可以直接用其生成UML图片。
 
 例如，下面为一个时序图文件的内容：
+
 ```
 @startuml
 Alice -> Bob: hello
 @enduml
+
 ```
 
 其生成的时序图为：
@@ -41,6 +43,7 @@ Alice -> Bob: hello
 * 时序图
 
 ```
+
 @startuml
 Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
@@ -150,12 +153,18 @@ ArrayList : size()
 
 个人推荐 Atom 编辑器作为编辑工具 ，其包含了PlantUML的插件：
 
+* plantuml-preview
 
-* plantuml-viewer
+![](http://feidragon.github.io/tower-resources/plantuml-preview-settings.png)
+参见：http://trevershick.github.io/atom/2015/12/04/plantuml-snippets.html
+
+
+<!-- * plantuml-viewer
 
   插件介绍：[https://atom.io/packages/plantuml-viewer](https://atom.io/packages/plantuml-viewer)
 
-  ![](https://i.github-camo.com/bb28497b36c99c618a38f3eb114420c699a87833/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f31303830393339302f706c616e74756d6c2d7669657765722e676966)
+  ![](https://i.github-camo.com/bb28497b36c99c618a38f3eb114420c699a87833/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f31303830393339302f706c616e74756d6c2d7669657765722e676966) -->
+
 
 ## 参考资料
 
