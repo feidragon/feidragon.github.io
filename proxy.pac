@@ -4547,8 +4547,3 @@ function FindProxyForURL(url, host) {
     }
     return direct;
 }
-
-function FindProxyForURL(url, host)
-{
-     return "SOCKS 192.168.1.108:7080";
-}
