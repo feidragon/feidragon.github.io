@@ -3208,6 +3208,8 @@ var rules = [
   ".zsrhao.com",
   ".zuo.la",
   "||zuo.la",
+  ".redtube.com",
+  "||redtube.com",
   ".zuola.com",
   "||zuola.com",
   "||zvereff.com",
