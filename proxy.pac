@@ -9,6 +9,8 @@ var rules = [
   "||fxnetworks.com",
   "hulu.com",
   "huluim.com",
+  ".pinterest.com",
+  "||pinterest.com",
   "|http://www.ilovelongtoes.com/",
   "||muzu.tv",
   "||netflix.com",
