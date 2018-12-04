@@ -1,1 +1,1 @@
-{"local_address": "0.0.0.0", "local_port": 7080, "method": "aes-256-cfb", "password": "dongtaiwang.com", "server": "103.114.161.158", "server_port": 6666, "timeout": 600}
+{"local_address": "0.0.0.0", "local_port": 7080, "method": "aes-256-cfb", "password": "dongtaiwang.com", "server": "103.114.161.158", "server_port": 443, "timeout": 600}
